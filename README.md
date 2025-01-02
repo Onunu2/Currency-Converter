@@ -8,3 +8,6 @@ In a bigger project, I would’ve used a store with effects to get the data and 
 - I haven’t done the chart yet because I wasn’t sure where to place it or which currency to use. 
 However, if it’s critical, I’d be able to work on it once I have some clarification on a few points.
 
+
+## Deployment
+You can find here https://onunu2.github.io/Currency-Converter the project running. I t is deployed on github.
