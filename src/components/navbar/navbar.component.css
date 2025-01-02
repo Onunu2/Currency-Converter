@@ -1,0 +1,13 @@
+.nav {
+  background: #007bff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+}
+
+.header {
+  color: white;
+  margin: 10px;
+  font-size: 20px;
+}

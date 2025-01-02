@@ -1,0 +1,36 @@
+<div class="converter">
+  <h1>Currencies Converter</h1>
+  <form class="converter-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label class="label" for="amountInput">Amount:</label>
+      <input class="input" id="amountInput" type="number" formControlName="amountInput"/>
+      <div *ngIf="form.get('amountInput')?.invalid && form.get('amountInput')?.dirty">
+        <small class="err-txt" *ngIf="form.get('amountInput')?.hasError('required')">Number is required.</small>
+        <small class="err-txt" *ngIf="form.get('amountInput')?.hasError('min')">Number must be greater than 0.</small>
+      </div>
+    </div>
+
+    <div>
+      <label class="label" for="originalCurrency">From:</label>
+      <select class="input" id="originalCurrency" formControlName="originalCurrency">
+        <option value="" disabled>Select a currency</option>
+        <option *ngFor="let option of ((currencies | async) | keyvalue)" [value]="option.key">
+          {{option.key}} | {{option.value}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label class="label" for="destCurrency">To:</label>
+      <select class="input" id="destCurrency" formControlName="destCurrency" >
+        <option value="" disabled>Select a currency</option>
+        <option *ngFor="let option of ((currencies | async) | keyvalue)" [value]="option.key">
+          {{option.key}} | {{option.value}}
+        </option>
+      </select>
+    </div>
+
+    <button class="submit" type="submit" [disabled]="!form.valid">Submit</button>
+  </form>
+  <div class="rate" *ngIf="rate"> {{rate.destAmount | currency:form.get('destCurrency')?.value}}</div>
+</div>

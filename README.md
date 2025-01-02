@@ -1,27 +1,10 @@
-# Untitled1
+# OR'S PROJECT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+## Key notes:
+- The focus was mainly on getting the functionality right, so while the user experience could be improved, I didn’t dive too deep into that.
+- Since this is a smaller project, I went with a service to store the history rates and fetch data from the API.
+In a bigger project, I would’ve used a store with effects to get the data and selectors to manage the state more efficiently.
+- The results history is saved in local storage so that it stays after a refresh.
+- I haven’t done the chart yet because I wasn’t sure where to place it or which currency to use. 
+However, if it’s critical, I’d be able to work on it once I have some clarification on a few points.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

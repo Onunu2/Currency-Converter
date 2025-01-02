@@ -1,0 +1,44 @@
+.converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.err-txt {
+  color: red;
+}
+
+.submit {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+.submit:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  max-width: 250px;
+}
+
+.rate {
+  margin: 2rem;
+  font-size: 20px;
+}
